@@ -24,5 +24,12 @@ $injector->define('Mustache_Engine', [
     ],
 ]);
 
+$injector->define('LessonPlanner\Page\FilePageReader', [
+    ':pageFolder' => __DIR__ . '/../pages',
+]);
+
+$injector->alias('LessonPlanner\Page\PageReader', 'LessonPlanner\Page\FilePageReader');
+$injector->share('LessonPlanner\Page\FilePageReader');
+
 
 return $injector;
