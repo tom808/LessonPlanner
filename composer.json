@@ -1,0 +1,25 @@
+{
+    "name": "Lesson Planner",
+    "description": "Tool to assist booking and managing driving lessons",
+    "keywords": ["Your keyword", "Another keyword"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tom Egan",
+            "email": "tom.j.egan88@gmail.com",
+            "role": "Creator / Main Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0",
+        "filp/whoops": ">=1.1.2",
+        "patricklouys/http": ">=1.1.0",
+        "nikic/fast-route": "^0.7.0",
+        "rdlowrey/auryn": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "LessonPlanner\\": "src/"
+        }
+    }
+}
