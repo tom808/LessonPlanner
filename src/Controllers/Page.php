@@ -3,7 +3,7 @@
 namespace LessonPlanner\Controllers;
 
 use Http\Response;
-use LessonPlanner\Template\Renderer;
+use LessonPlanner\Template\FrontendRenderer;
 use LessonPlanner\Page\PageReader;
 use LessonPlanner\Page\InvalidPageException;
 
@@ -14,7 +14,7 @@ class Page
 	private $renderer;
 	private $pageReader;
 
-	public function __construct(Response $response, Renderer $renderer, PageReader $pageReader)
+	public function __construct(Response $response, FrontendRenderer $renderer, PageReader $pageReader)
 	{
 
 		$this->response = $response;

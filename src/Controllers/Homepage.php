@@ -4,7 +4,7 @@ namespace LessonPlanner\Controllers;
 
 use Http\Request;
 use Http\Response;
-use LessonPlanner\Template\Renderer;
+use LessonPlanner\Template\FrontendRenderer;
 
 class Homepage
 {
@@ -12,7 +12,7 @@ class Homepage
     private $response;
     private $renderer;
 
-    public function __construct(Request $request, Response $response, Renderer $renderer)
+    public function __construct(Request $request, Response $response, FrontendRenderer $renderer)
     {
         $this->request = $request;
         $this->response = $response;
@@ -23,7 +23,7 @@ class Homepage
     public function show()
     {
         $data = [
-            'name' => $this->request->getParameter('name', 'stranger'),
+            'name' => $this->request->getParameter('name', 'stranger')
         ];
         $html = $this->renderer->render('Homepage', $data);
         $this->response->setContent($html);

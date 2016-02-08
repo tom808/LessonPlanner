@@ -45,12 +45,14 @@ switch ($routeInfo[0]) {
         $response->setContent('405 - Method not allowed');
         $response->setStatusCode(405);
         break;
-		case \FastRoute\Dispatcher::FOUND:
-		    $className = $routeInfo[1][0];
-		    $method = $routeInfo[1][1];
-		    $vars = $routeInfo[2];
-		    
-            $class = $injector->make($className);
-            $class->$method($vars);
-		    break;
+	case \FastRoute\Dispatcher::FOUND:
+        $className = $routeInfo[1][0];
+	    $method = $routeInfo[1][1];
+	    $vars = $routeInfo[2];
+
+        $class = $injector->make($className);
+        $class->$method($vars);
+	    break;
 }
+
+echo $response->getContent();
