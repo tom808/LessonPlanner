@@ -1,0 +1,23 @@
+{% extends "Layout.html" %}
+
+
+{% block imports %}
+    <link rel='stylesheet' href='lib/fullcalendar/fullcalendar.css'/>
+
+    <script src='lib/moment/moment.js'></script>
+    <script src='lib/jquery/jquery.js'></script>
+    <script src='lib/fullcalendar/fullcalendar.js'></script>
+
+{% endblock %}
+
+
+
+{% block content %}
+    <h2>Hi {{ name }}, welcome to your lesson calendar</h2>
+    <div id='calendar'></div>
+{% endblock %}
+
+{% block afterload %}
+<script src="js/calendar.js"></script>
+
+{% endblock %}

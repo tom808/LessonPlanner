@@ -19,8 +19,8 @@ class FrontendTwigRenderer implements FrontendRenderer
     public function render($template, $data = [])
     {
         $data = array_merge($data, [
-            'menuItems' => $this->menuReader->readMenu(),
-        ]);
+        'menuItems' => $this->menuReader->readMenu(),
+    ]);
         return $this->renderer->render($template, $data);
     }
 }

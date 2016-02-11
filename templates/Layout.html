@@ -5,6 +5,8 @@
         <title>Example</title>
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
         <link rel="stylesheet" href="/css/style.css">
+        {% block imports %}
+        {% endblock %}
     </head>
     <body>
         <div id="layout">
@@ -12,7 +14,9 @@
                 <div class="pure-menu">
                     <ul class="pure-menu-list">
                         {% for item in menuItems %}
-                            <li class="pure-menu-item"><a href="{{ item['href'] }}" class="pure-menu-link">{{ item['text'] }}</a></li>
+                            <li class="pure-menu-item">
+                                <a href="{{ item['href'] }}" class="pure-menu-link">{{ item['text'] }}</a>
+                            </li>
                         {% endfor %}
                     </ul>
                 </div>
@@ -25,4 +29,6 @@
             </div>
         </div>
     </body>
+    {% block afterload %}
+    {% endblock %}
 </html>
