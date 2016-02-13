@@ -14,7 +14,9 @@ module.exports = function(grunt) {
                     'jquery/jquery.js': 'jquery/dist/jquery.js',
                     'fullcalendar/fullcalendar.js': 'fullcalendar/dist/fullcalendar.js',
                     'fullcalendar/fullcalendar.css': 'fullcalendar/dist/fullcalendar.css',
-                    'moment/moment.js': 'moment/src/moment.js'
+                    'moment/moment.js': 'moment/src/moment.js',
+                    'magnific-popup/magnific-popup.js':'magnific-popup/dist/jquery.magnific-popup.js',
+                    'magnific-popup/magnific-popup.css':'magnific-popup/dist/magnific-popup.css'
                 }
             },
             folders: {

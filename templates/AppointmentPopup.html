@@ -1,0 +1,11 @@
+<div id="appointment-popup" class="mfp-hide">
+
+    <h2 id="appointment-timeslot-title"></h2>
+    
+    <select id="student-select">
+        {% for key, student in students %}
+        <option value="{{key}}">{{ student }}</option>
+        {% endfor %}
+    </select>
+
+</div>

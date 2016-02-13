@@ -24,7 +24,8 @@ class Calendar
     {
         //TODO this data needs to comes from an actual source
         $data = [
-            'name' => $this->request->getParameter('name', 'stranger')
+            'name' => $this->request->getParameter('name', 'stranger'),
+            'students' => array(1 => 'Tom', 2 => 'Jodie', 3 => 'Phil')
         ];
         $html = $this->renderer->render('Calendar', $data);
         $this->response->setContent($html);
